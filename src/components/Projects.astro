@@ -5,6 +5,7 @@ import CSS from "./icons/CSS.astro"
 import HTML from "./icons/HTML.astro"
 import MySQL from "./icons/MySQL.astro"
 import JavaScript from "./icons/JavaScript.astro"
+import Python from "./icons/Python.astro"
 
 const TAGS = {
     NEXT: {
@@ -37,6 +38,11 @@ const TAGS = {
         class: "bg-black text-white",
         icon: JavaScript,
     },
+    PYTHON: {
+        name: "Python",
+        class: "bg-black text-white",
+        icon: Python,
+    },
 }
 
 const PROJECTS = [
@@ -55,6 +61,14 @@ const PROJECTS = [
         github: "https://github.com/818diego/calciferoleplay",
         image: "/projects/CALCIFER.webp",
         tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+    },
+    {
+        title: "Dog Breed Prediction Web Application",
+        description: "This web application uses a Convolutional Neural Network (CNN) implemented in Python to predict the breed of a dog based on an uploaded image. The project includes both the Python code for the CNN model and the web application source code.",
+        link: "#",
+        github: "https://github.com/818diego/RedNeuronal",
+        image: "/projects/RedNeuronal.webp",
+        tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT,TAGS.PYTHON],
     },
 ]
 ---
