@@ -7,25 +7,32 @@ const EXPERIENCE = [
         date: "Currently...",
         title: "Freelance Web Developer",
         description:
-            "Web application development, interface design and user experience.",
+            "Currently I work on client projects, such as static pages, web applications, designs for a user experience.",
         link: "#",
     },
     {
         date: "December 2023 - January 2024.",
         title: "Hotel La Costa ",
         description:
-            "Systems developer, for hotel management",
+            "We worked for the company Hotel La Costa and during this time we developed a system for total hotel management.",
         link: "https://costaensenada.com/",
     },
+    {
+        date: "August 2023 - December 2023",
+        title: "Sales Management System",
+        description:
+            "Working for a salen system in the university in 6th semester os the Software Engineering Program",
+        link: "",
+    },
 ];
---- 
+---
 
 <ol class="relative border-s border-gray-200 ml-3">
     {
         EXPERIENCE.map((experience) => (
             <li class="mb-10 ms-4">
                 <ExperencieItem {...experience} />
-            </li> 
+            </li>
         ))
     }
-</ol> 
+</ol>
