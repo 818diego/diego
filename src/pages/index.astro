@@ -1,5 +1,4 @@
 ---
-
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/Github.astro";
 import MailIcon from "../components/icons/Mail.astro";
@@ -13,6 +12,7 @@ import EXPERENCIE from "../components/Experencie.astro";
 import SocialPill from "../components/SocialPills.astro";
 import Bagde from "../components/Bagde.astro";
 import Layout from "../layouts/Layout.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -36,8 +36,8 @@ import Layout from "../layouts/Layout.astro";
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span class="text-pink-700/95">Web Developer</span> from Mexico,
-				Specialized in creating unique web unique web applications and
-				desing UX/UI.
+				Specialized in creating unique web unique web applications and desing
+				UX/UI.
 			</h2>
 			<ul>
 				<nav class="flex gap-4 mt-6 flex-wrap">
@@ -73,13 +73,20 @@ import Layout from "../layouts/Layout.astro";
 			</h2>
 			<EXPERENCIE />
 		</SectionContainer>
-		
+
 		<SectionContainer id="projects">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-8" />
 				Projects
 			</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="about-me">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<MaletaIcon class="size-8" />
+				About Me
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>
