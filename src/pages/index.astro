@@ -13,80 +13,74 @@ import SocialPill from "../components/SocialPills.astro";
 import Bagde from "../components/Bagde.astro";
 import Layout from "../layouts/Layout.astro";
 import AboutMe from "../components/AboutMe.astro";
+import SectionProject from "../components/SectionProject.astro";
 ---
 
 <Layout
-	title="Portfolio - Diego"
-	description="Hire Diego for web page creation and web application development, along with his UX design."
->
-	<main class="px-5">
-		<SectionContainer id="home" class="py-44 pb-24">
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-6 pb-6 lg:pb-7"
-			>
-				Hey, I'm Diego <a
-					href="https://www.linkedin.com/in/diego-francisco-merino-huizar-343b27293/"
-					class="flex justify-center items-center"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Bagde>Available for work</Bagde>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span class="text-pink-700/95">Web Developer</span> from Mexico,
-				Specialized in creating unique web unique web applications and desing
-				UX/UI.
-			</h2>
-			<ul>
-				<nav class="flex gap-4 mt-6 flex-wrap">
-					<SocialPill
-						href="https://www.linkedin.com/in/diego-francisco-merino-huizar-343b27293/"
-					>
-						<LinkedInIcon class="size-4 md:size-6" />
-						LinkedIn
-					</SocialPill>
+    title="Portfolio - Diego"
+    description="Hire Diego for web page creation and web application development, along with his UX design.">
+    <main class="px-5">
+        <SectionContainer id="home" class="py-44 pb-24">
+            <h1
+                class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-6 pb-6 lg:pb-7">
+                Hey, I'm Diego <a
+                    href="https://www.linkedin.com/in/diego-francisco-merino-huizar-343b27293/"
+                    class="flex justify-center items-center"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex justify-center items-center">
+                    <Bagde>Available for work</Bagde>
+                </a>
+            </h1>
+            <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+                <span class="text-pink-700/95">Web Developer</span> from Mexico,
+                Specialized in creating unique web unique web applications and desing
+                UX/UI.
+            </h2>
+            <ul>
+                <nav class="flex gap-4 mt-6 flex-wrap">
+                    <SocialPill
+                        href="https://www.linkedin.com/in/diego-francisco-merino-huizar-343b27293/">
+                        <LinkedInIcon class="size-4 md:size-6" />
+                        LinkedIn
+                    </SocialPill>
 
-					<SocialPill href="https://github.com/818diego">
-						<GitHubIcon class="size-4 md:size-6" />
-						Github
-					</SocialPill>
+                    <SocialPill href="https://github.com/818diego">
+                        <GitHubIcon class="size-4 md:size-6" />
+                        Github
+                    </SocialPill>
 
-					<SocialPill href="https://discord.gg/NFMssVk8aY">
-						<DiscordIcon class="size-4 md:size-6" />
-						818diego
-					</SocialPill>
+                    <SocialPill href="https://discord.gg/NFMssVk8aY">
+                        <DiscordIcon class="size-4 md:size-6" />
+                        818diego
+                    </SocialPill>
 
-					<SocialPill href="mailto:diego.merino@uabc.edu.mx">
-						<MailIcon class="size-4 md:size-6" />
-						Enviar Correo
-					</SocialPill>
-				</nav>
-			</ul>
-		</SectionContainer>
+                    <SocialPill href="mailto:diego.merino@uabc.edu.mx">
+                        <MailIcon class="size-4 md:size-6" />
+                        Enviar Correo
+                    </SocialPill>
+                </nav>
+            </ul>
+        </SectionContainer>
 
-		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<MaletaIcon class="size-8" />
-				Experencie
-			</h2>
-			<EXPERENCIE />
-		</SectionContainer>
+        <SectionContainer id="experience">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <MaletaIcon class="size-8" />
+                Experencie
+            </h2>
+            <EXPERENCIE />
+        </SectionContainer>
 
-		<SectionContainer id="projects">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-8" />
-				Projects
-			</h2>
-			<Projects />
-		</SectionContainer>
+        <SectionProject id="projects">
+            <Projects />
+        </SectionProject>
 
-		<SectionContainer id="about-me">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<MaletaIcon class="size-8" />
-				About Me
-			<AboutMe />
-		</SectionContainer>
-	</main>
+        <SectionContainer id="about-me">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <MaletaIcon class="size-8" />
+                About Me
+                <AboutMe />
+            </h2>
+        </SectionContainer>
+    </main>
 </Layout>

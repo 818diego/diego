@@ -1,5 +1,4 @@
 ---
-import type { Code, Debug } from "astro:components";
 import ExperencieItem from "./ExperencieItem.astro";
 
 const EXPERIENCE = [
@@ -9,7 +8,15 @@ const EXPERIENCE = [
         description:
             "Currently I work on client projects, such as static pages, web applications, designs for a user experience.",
         link: "#",
+    }, //PON QUE ESTOY CURSANDO PRACTICAS PROFESIONALES EN LA EMPRESA DE DILATO INFOTECHT SIGUIENDO METODOLOGIAS AGILES DE SCRUM COMO FULL STACK
+    {
+        date: "September 2024 - Currently",
+        title: "Dilato Infotech",
+        description:
+            "I am currently doing my professional practices at the company Dilato Infotech, where I am working as a full stack developer.",
+        link: "https://dilato.com/",
     },
+
     {
         date: "December 2023 - January 2024.",
         title: "Hotel La Costa ",
@@ -30,7 +37,7 @@ const EXPERIENCE = [
 <ol class="relative border-s border-gray-200 ml-3">
     {
         EXPERIENCE.map((experience) => (
-            <li class="mb-10 ms-4">
+            <li class="mb-8 ms-4">
                 <ExperencieItem {...experience} />
             </li>
         ))

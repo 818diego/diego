@@ -1,11 +1,11 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import PHP from "./icons/PHP.astro"
-import CSS from "./icons/CSS.astro"
-import HTML from "./icons/HTML.astro"
-import MySQL from "./icons/MySQL.astro"
-import JavaScript from "./icons/JavaScript.astro"
-import Python from "./icons/Python.astro"
+import NextJS from "./icons/NextJS.astro";
+import PHP from "./icons/PHP.astro";
+import CSS from "./icons/CSS.astro";
+import HTML from "./icons/HTML.astro";
+import MySQL from "./icons/MySQL.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Python from "./icons/Python.astro";
 
 const TAGS = {
     NEXT: {
@@ -18,7 +18,7 @@ const TAGS = {
         class: "bg-black text-white",
         icon: PHP,
     },
-    CSS : {
+    CSS: {
         name: "HTML",
         class: "bg-black text-white",
         icon: CSS,
@@ -43,12 +43,13 @@ const TAGS = {
         class: "bg-black text-white",
         icon: Python,
     },
-}
+};
 
 const PROJECTS = [
     {
         title: "Management of hotel room reservations",
-        description: " Web application for the management of hotel room reservations.",
+        description:
+            " Web application for the management of hotel room reservations.",
         link: "https://costaensenada.com/",
         github: "#",
         image: "/projects/hotel.webp",
@@ -56,7 +57,8 @@ const PROJECTS = [
     },
     {
         title: "Static web page for Calcifer Roleplay",
-        description: "Calcifer Roleplay is a GTA V Roleplay server and a static website was made for the promotion of GTA V Roleplay.",
+        description:
+            "Calcifer Roleplay is a GTA V Roleplay server and a static website was made for the promotion of GTA V Roleplay.",
         link: "www.calciferrp.com",
         github: "https://github.com/818diego/calciferoleplay",
         image: "/projects/CALCIFER.webp",
@@ -64,34 +66,38 @@ const PROJECTS = [
     },
     {
         title: "Dog Breed Prediction Web Application",
-        description: "This web application uses a Convolutional Neural Network (CNN) implemented in Python to predict the breed of a dog based on an uploaded image. The project includes both the Python code for the CNN model and the web application source code.",
+        description:
+            "This web application uses a Convolutional Neural Network (CNN) implemented in Python to predict the breed of a dog based on an uploaded image.",
         link: "#",
         github: "https://github.com/818diego/RedNeuronal",
         image: "/projects/RedNeuronal.webp",
-        tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT,TAGS.PYTHON],
+        tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.PYTHON],
     },
-]
+];
 ---
 
 {
-    PROJECTS.map(({image, title, description, tags}) => ( 
-        <article class="py-5 px-2">
-            <h3 class="text-2xl font-semibold text-pink-700 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-4 flex-row">
-                {tags.map((tag) => (
-                    <li> 
-                        <span class={`flex gap-x-4 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                            <tag.icon class="size-8"/>    
-                        </span>
-                    </li>
-                ))}
-            </ul>
+    PROJECTS.map(({ image, title, description, tags }) => (
+        <article class="relative group py-5 px-2">
+            <div class="overflow-hidden rounded-md relative">
                 <img
-                class="rounded shadow-2xl shadow-white/10 py-1" 
-                src={image} 
-                style={{borderRadius: "35px"}}
-                alt={`Captura de pantalla del proyecto ${image}`} />
+                    class="w-full h-auto object-cover transition duration-500 ease-in-out transform group-hover:blur-sm"
+                    src={image}
+                    alt={`Captura de pantalla del proyecto ${title}`}
+                    style={{ borderRadius: "35px" }}
+                />
+                <div class="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <ul class="flex gap-4">
+                        {tags.map((tag) => (
+                            <li key={tag.name} class="flex items-center">
+                                <tag.icon class="w-8 h-8 text-white" />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <h3 class="text-2xl font-semibold text-pink-700 mt-4">{title}</h3>
+            <p class="text-lg text-pretty mb-4">{description}</p>
         </article>
     ))
 }
